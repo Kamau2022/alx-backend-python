@@ -3,5 +3,12 @@
 
 
 def add(a: float, b: float) -> float:
-    """a function that returns sum of two float numbers"""
+    """a function that returns sum of two float numbers
+    Args:
+        a :float
+        b :float
+    Returns:
+        float: a + b
+    """
+
     return a + b
