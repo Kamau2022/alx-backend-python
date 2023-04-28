@@ -5,10 +5,10 @@ from typing import List, Union
 
 
 def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
-    """a function that which takes a list input_list of
-       floats as argument
+    """a function that which takes a list mxd_lst of
+       floats and int as argument
     Args:
-       input_list(float): list
+       mxd_lst(float): list
     Returns:
         sum: float
     """
