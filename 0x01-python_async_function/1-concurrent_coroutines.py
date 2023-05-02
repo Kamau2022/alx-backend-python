@@ -10,6 +10,6 @@ async def wait_n(n: int, max_delay: int) -> float:
     """ asynchronous routine that takes in
         two integer argument
     """
-    tasks = [asyncio.create_task(wait_random(max_delay)) for n in range(n)]
+    tasks = [asyncio.create_task(wait_random(max_delay: int)) for n in range(n)]
     await asyncio.wait(tasks)
     return tasks
