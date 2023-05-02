@@ -2,14 +2,14 @@
 """a module on  asynchronous coroutine
 """
 import asyncio
-import random
+from typing import List
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> float:
+async def wait_n(n: int, max_delay: int) -> List[float]:
     """ asynchronous routine that takes in
         two integer argument
     """
-    tasks = [asyncio.create_task(wait_random(max_delay: int)) for n in range(n)]
-    await asyncio.wait(tasks)
-    return tasks
+    tasks = await asyncio.gather(*tuple((wait_random(max_delay)
+                                 for x in range(n))))
+    return sorted(tasks)
